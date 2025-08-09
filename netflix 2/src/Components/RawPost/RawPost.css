@@ -1,0 +1,22 @@
+.raw {
+    padding: 20px;
+    color: white;
+}
+
+.posters {
+    display: flex;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    overflow-y: hidden; /* Hide vertical scrolling */
+    padding: 10px 0;
+}
+
+.poster {
+    max-height: 200px; /* Set a maximum height for the posters */
+    margin-right: 10px;
+    transition: transform 0.2s;
+    cursor: pointer;
+}
+
+.poster:hover {
+    transform: scale(1.05); /* Slightly enlarge the poster on hover */
+}

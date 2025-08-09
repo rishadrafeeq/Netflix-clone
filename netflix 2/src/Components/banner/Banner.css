@@ -1,0 +1,338 @@
+.banner {
+    height: 80vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    text-align: left;
+    position: relative;
+    padding: 0 60px 80px 60px;
+    box-sizing: border-box;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    /* Enhanced image quality settings */
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.content {
+    position: relative;
+    z-index: 3;
+    max-width: 800px;
+    width: 100%;
+}
+
+.banner-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.contents {
+    max-width: 600px;
+    padding: 30px;
+    margin-left: 0;
+}
+
+.title {
+    font-size: 4rem;
+    font-weight: 800;
+    font-family: 'Helvetica Neue', 'Arial Black', sans-serif;
+    padding-bottom: 0.5rem;
+    text-shadow: 3px 3px 12px rgba(0, 0, 0, 0.9), 0 0 25px rgba(0, 0, 0, 0.7);
+    color: #ffffff;
+    text-align: left;
+    margin-bottom: 1rem;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    /* Ensure title doesn't get cut off */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.banner_buttons {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.button {
+    padding: 12px 32px;
+    border: none;
+    border-radius: 6px;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #000;
+    font-weight: 600;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    min-width: 120px;
+    text-align: center;
+}
+
+.button:hover {
+    background-color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.button:first-child {
+    background-color: #e50914;
+    color: white;
+}
+
+.button:first-child:hover {
+    background-color: #f40612;
+}
+
+.refresh-button {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    color: white;
+    font-size: 0.9rem;
+    padding: 0.6rem 1.5rem;
+}
+
+.refresh-button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: translateY(-1px);
+}
+
+.refresh-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.play-button {
+    position: relative;
+    overflow: hidden;
+}
+
+.play-button:hover {
+    background-color: #f40612;
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+
+.description {
+    font-size: 1.4rem;
+    font-weight: 400;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    margin-top: 1.5rem;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9), 0 0 20px rgba(0, 0, 0, 0.6);
+    color: #ffffff;
+    text-align: left;
+    max-width: 700px;
+    opacity: 0.95;
+    letter-spacing: 0.01em;
+    /* Ensure description is readable and doesn't overflow */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    /* Limit description height and make it scrollable if needed */
+    max-height: 120px;
+    overflow-y: auto;
+    /* Custom scrollbar */
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+}
+
+.description::-webkit-scrollbar {
+    width: 6px;
+}
+
+.description::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.description::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 3px;
+}
+
+.movie-year {
+    font-size: 1.2rem;
+    color: #cccccc;
+    margin-bottom: 1rem;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9);
+    font-weight: 500;
+}
+
+.movie-rating {
+    font-size: 1.1rem;
+    color: #ffd700;
+    margin-top: 0.5rem;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9);
+    font-weight: 600;
+}
+
+.fade_bottom {
+    height: 150px;
+    width: 100%;
+    background-image: linear-gradient(180deg, transparent, rgba(37, 37, 37, 0.61), #111);
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+}
+
+.scrollable-content {
+    max-height: 300px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+/* Enhanced overlay for better text readability */
+.banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        135deg, 
+        rgba(0,0,0,0.7) 0%, 
+        rgba(0,0,0,0.3) 30%, 
+        rgba(0,0,0,0.1) 60%, 
+        rgba(0,0,0,0.6) 100%
+    );
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Responsive design */
+@media (max-width: 1200px) {
+    .banner {
+        padding: 0 40px 60px 40px;
+    }
+    
+    .title {
+        font-size: 3.5rem;
+    }
+    
+    .description {
+        font-size: 1.3rem;
+        max-height: 100px;
+    }
+}
+
+@media (max-width: 768px) {
+    .banner {
+        height: 70vh;
+        padding: 0 30px 50px 30px;
+    }
+    
+    .title {
+        font-size: 2.8rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    .description {
+        font-size: 1.2rem;
+        max-height: 80px;
+        margin-top: 1rem;
+    }
+    
+    .banner_buttons {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        gap: 15px;
+    }
+    
+    .button {
+        padding: 10px 24px;
+        font-size: 1rem;
+        min-width: 100px;
+    }
+    
+    .content {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner {
+        height: 60vh;
+        padding: 0 20px 40px 20px;
+    }
+    
+    .title {
+        font-size: 2.2rem;
+        margin-bottom: 0.6rem;
+    }
+    
+    .description {
+        font-size: 1.1rem;
+        max-height: 70px;
+        margin-top: 0.8rem;
+    }
+    
+    .banner_buttons {
+        margin-top: 15px;
+        margin-bottom: 15px;
+        gap: 12px;
+    }
+    
+    .button {
+        padding: 8px 20px;
+        font-size: 0.9rem;
+        min-width: 90px;
+    }
+    
+    .movie-year {
+        font-size: 1rem;
+    }
+    
+    .movie-rating {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .banner {
+        height: 55vh;
+        padding: 0 15px 30px 15px;
+    }
+    
+    .title {
+        font-size: 1.8rem;
+    }
+    
+    .description {
+        font-size: 1rem;
+        max-height: 60px;
+    }
+    
+    .banner_buttons {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .button {
+        width: 100%;
+        max-width: 200px;
+    }
+}

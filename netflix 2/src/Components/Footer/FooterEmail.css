@@ -1,0 +1,64 @@
+.footer-email-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(0,0,0,0.7);
+  padding: 40px 0 30px 0;
+  width: 100%;
+}
+
+.footer-email-title {                                   
+  color: #fff;
+  font-size: 1.35rem;
+  font-weight: 500;
+  margin-bottom: 22px;
+  text-align: center;
+  max-width: 700px;
+}
+
+.footer-email-form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0;
+  width: 100%;
+  max-width: 540px;
+}
+
+.footer-email-input {
+  flex: 1;
+  padding: 18px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px 0 0 4px;
+  outline: none;
+  background: rgba(20,20,20,0.85);
+  color: #fff;
+  border: 1.5px solid #444;
+  border-right: none;
+}
+
+.footer-email-btn {
+  background: #e50914;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  padding: 0 36px;
+  height: 56px;
+  cursor: pointer;
+  transition: background 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-email-btn:hover {
+  background: #f40612;
+}
+
+.footer-email-arrow {
+  font-size: 1.2em;
+  margin-left: 6px;
+}

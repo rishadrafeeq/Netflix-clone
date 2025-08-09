@@ -1,0 +1,186 @@
+/* Netflix Sign-In Page Styles */
+.signInContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                url('https://assets.nflxext.com/ffe/siteui/vlv3/93da5c27-be66-427c-8b72-5cb39d275279/94eb5ad7-10d8-4cca-bf45-ac52e0a052c0/US-en-20240226-popsignuptwoweeks-perspective_alpha_website_large.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.signInForm {
+    background-color: rgba(0, 0, 0, 0.75);
+    padding: 60px 68px 40px;
+    border-radius: 4px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 450px;
+    color: white;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.signInForm h2 {
+    color: white;
+    font-size: 32px;
+    font-weight: 500;
+    margin-bottom: 28px;
+    text-align: center;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+.signInForm form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.signInForm input {
+    background-color: #333;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+    padding: 16px 20px;
+    height: 50px;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+.signInForm input::placeholder {
+    color: #8c8c8c;
+}
+
+.signInForm input:focus {
+    outline: none;
+    background-color: #454545;
+    border-bottom: 2px solid #e87c03;
+}
+
+.signInForm button[type="submit"] {
+    background-color: #e50914;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 16px;
+    margin-top: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    height: 50px;
+}
+
+.signInForm button[type="submit"]:hover {
+    background-color: #f40612;
+}
+
+.signInForm p {
+    color: #737373;
+    font-size: 16px;
+    margin: 16px 0;
+    text-align: center;
+}
+
+.signInForm a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.signInForm a:hover {
+    text-decoration: underline;
+}
+
+.socialMediaLogins {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.socialMediaLogins button {
+    background-color: transparent;
+    color: #737373;
+    border: 1px solid #737373;
+    border-radius: 4px;
+    padding: 12px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.socialMediaLogins button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    border-color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .signInForm {
+        padding: 40px 20px;
+        margin: 0 20px;
+    }
+    
+    .signInForm h2 {
+        font-size: 24px;
+    }
+    
+    .signInContainer {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .signInForm {
+        padding: 30px 15px;
+    }
+    
+    .signInForm h2 {
+        font-size: 20px;
+    }
+}
+
+/* Animation for form appearance */
+.signInForm {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Loading state for submit button */
+.signInForm button[type="submit"]:disabled {
+    background-color: #666;
+    cursor: not-allowed;
+}
+
+/* Error state for inputs */
+.signInForm input.error {
+    border-bottom: 2px solid #e50914;
+}
+
+/* Success state for inputs */
+.signInForm input.success {
+    border-bottom: 2px solid #46d369;
+}
